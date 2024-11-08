@@ -1,0 +1,22 @@
+:root {
+  --midnight-green: #014e56;
+  --light-color:#f67e7e;
+  --wight-color:#fff;
+  --rapture-blue:#79c8c7;
+  --police-blue:#2c6269;
+  --deep-jungle-green:#004047;
+  --sacramento-state-green:#012f34;
+  --dark-green:#002529;
+  --h1-large:10rem ;
+  --h1-large-lh:1;
+  --h1-small:6.4rem;
+  --h1-small-lh:0.875;
+  --h2-font:4.8rem;
+  --h2-font-lh:1;
+  --h3-font:1.8rem;
+  --h3-font-lh:1.55;
+  --body1-font: 1.8rem;
+  --body1-lh:1.55;
+  --body2-font: 1.5rem;
+  --body2-lh:1.66;
+}

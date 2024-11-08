@@ -1,0 +1,854 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* {
+  transition: 0.3s ease;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* 10px */
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  display: flex;
+  object-fit: cover;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Livvic", sans-serif;
+}
+
+/* normalize css problem fixed */
+h1 {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1210px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+main {
+  flex-grow: 1;
+}
+.btn {
+  padding-top: 0.9rem;
+  padding-bottom: 1.1rem;
+  padding-left: 3.2rem;
+  padding-right: 3.3rem;
+  border: 2px solid #ffffff;
+  border-radius: 2.4rem;
+  font-family: "Livvic", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.55;
+  text-align: left;
+  background-color: #012f34;
+  color: #ffffff;
+  text-align: center;
+}
+
+.mobile-nav {
+  background: url(../images/humburger-bg-img.png) bottom right no-repeat;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-color: var(--sacramento-state-green);
+  z-index: 1000;
+  padding-top: 9rem;
+  padding-left: 4.8rem;
+  padding-right: 4.8rem;
+  transform: translateX(200%);
+  transition: transform 0.3s ease-in-out;
+}
+.mobile-nav::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/icon-close.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 16rem;
+  margin-bottom: 4rem;
+}
+
+.mobile-nav nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+header {
+  background-color: var(--midnight-green);
+  padding-top: 7.7rem;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13.3rem;
+}
+
+.header-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header-logo-link {
+  margin-right: 8rem;
+}
+
+.sitenav-list {
+  display: flex;
+  gap: 4rem;
+}
+
+.sitenav-link {
+  font-size: var(--body1-font);
+  font-weight: 600;
+  line-height: var(--body1-lh);
+  text-align: left;
+  transition: transform 1s;
+  color: var(--wight-color);
+  transform-style: preserve-3d;
+  animation: rotateY 2s linear calc(2);
+  &:hover {
+    color: var(--light-color);
+  }
+}
+.sitenav-img {
+  display: none;
+}
+.header-link {
+  background-color: var(--midnight-green);
+
+  &:hover {
+    background-color: var(--wight-color);
+    color: var(--dark-green);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.hero {
+  background: url(../images/hero-bg-img1.png) left top no-repeat,
+    url(../images/hero-bg-img2.svg) bottom right 16.5rem no-repeat;
+}
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25rem;
+}
+
+.hero__container-title {
+  font-size: var(--h1-large);
+  font-weight: 700;
+  line-height: var(--h1-large-lh);
+  text-align: left;
+  color: var(--wight-color);
+}
+
+.hero__container-title span {
+  color: var(--light-color);
+}
+
+.hero__container-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+hr {
+  border: none;
+  width: 50px;
+  height: 4px;
+  background-color: var(--rapture-blue);
+}
+.hero__container-description {
+  font-size: var(--body1-font);
+  font-weight: 600;
+  line-height: var(--body1-lh);
+  text-align: left;
+  color: var(--wight-color);
+  width: 445px;
+}
+
+.features {
+  background: url(../images/main-top-bg-img.png) bottom right no-repeat;
+  background-color: var(--sacramento-state-green);
+}
+.feature__container {
+  padding-top: 14rem;
+  padding-bottom: 14rem;
+  width: none;
+}
+
+.feature__container-text {
+  display: flex;
+  gap: 12.5rem;
+}
+.main-hr {
+  background-color: var(--light-color);
+  margin-bottom: 5.4rem;
+}
+.feature__container-title {
+  font-size: var(--h2-font);
+  font-weight: 700;
+  line-height: var(--body2-lh);
+  text-align: left;
+  color: var(--wight-color);
+  max-width: 445px;
+}
+.features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.feature__item {
+  display: flex;
+  gap: 2.3rem;
+  max-width: 540px;
+}
+.feature__item-img {
+  width: 72px;
+  height: 80px;
+}
+.feature__item__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.feature__item__text-title {
+  font-size: var(--h3-font);
+  font-weight: 700;
+  line-height: var(--h3-font-lh);
+  text-align: left;
+  color: var(--light-color);
+}
+.feature__item__text-description {
+  font-size: var(--body2-font);
+  font-weight: 600;
+  line-height: var(--body1-lh);
+  text-align: left;
+  color: var(--wight-color);
+}
+
+.home {
+  background: url(../images/bg-pattern-home-4-about-3.svg) top left no-repeat,
+    url(../images/bg-pattern-about-2-contact-1.svg) bottom -10rem right no-repeat;
+  background-color: var(--deep-jungle-green);
+}
+
+.home__container {
+  padding-top: 14rem;
+  padding-bottom: 14rem;
+}
+.home__container-wrapper {
+  display: flex;
+  gap: 3rem;
+}
+
+.home__container-title {
+  font-size: var(--h2-font);
+  font-weight: 700;
+  line-height: var(--h2-font-lh);
+  text-align: center;
+  color: var(--wight-color);
+  margin-bottom: 5.6rem;
+}
+
+.home__container-title span {
+  color: var(--rapture-blue);
+}
+.home__container-texts {
+  background: url(../images/icon-quotes.svg) top left 14.2rem no-repeat;
+  padding-top: 3.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home__container-description {
+  font-size: var(--body2-font);
+  font-weight: 600;
+  line-height: var(--body2-lh);
+  text-align: center;
+  color: var(--wight-color);
+  margin-bottom: 2.4rem;
+}
+.home__container-name {
+  font-size: var(--h3-font);
+  font-weight: 700;
+  line-height: var(--h3-font-lh);
+  text-align: center;
+  color: var(--rapture-blue);
+  margin-bottom: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.home__container-name-text {
+  font-family: Livvic;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.38;
+  text-align: center;
+  color: var(--wight-color);
+  margin-bottom: 3.2rem;
+}
+.home__container-img {
+  border-radius: 50%;
+}
+
+.ready {
+  background: url(../images/bg-pattern-home-6-about-5.svg) bottom left no-repeat;
+  background-color: var(--light-color);
+}
+.ready__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 7.6rem;
+  padding-bottom: 7.6rem;
+  padding-left: 15.3rem;
+  padding-right: 14rem;
+}
+
+.ready__container-title {
+  font-size: var(--h2-font);
+  font-weight: 700;
+  line-height: var(--h2-font-lh);
+  text-align: left;
+  color: var(--sacramento-state-green);
+}
+.ready__container-btn {
+  font-size: var(--body1-font);
+  font-weight: 600;
+  line-height: var(--body1-lh);
+  text-align: left;
+  background-color: var(--light-color);
+  border-color: var(--sacramento-state-green);
+  color: var(--sacramento-state-green);
+
+  &:hover {
+    background-color: var(--sacramento-state-green);
+    color: var(--wight-color);
+  }
+}
+
+.footer {
+  background-color: var(--dark-green);
+  padding: 4.8rem 0;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-left {
+  display: flex;
+  align-items: start;
+  gap: 12.5rem;
+}
+.footer-left__logo {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-link {
+  color: var(--wight-color);
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  transition: 1s;
+  transform-style: preserve-3d;
+  animation: rotateY 2s linear calc(2);
+
+  &:hover {
+    color: var(--light-color);
+  }
+}
+.footer-left__contact__item {
+  font-size: 1.5rem;
+  color: var(--wight-color);
+  opacity: 0.6;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  user-select: none;
+  transition: 0.15s;
+  &:hover {
+    opacity: 1;
+  }
+}
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+}
+.fa-brands {
+  color: var(--wight-color);
+  font-size: 2.4rem;
+  margin-right: 1.6rem;
+  transition: color 0.3s, transform 0.6s;
+  &:hover {
+    color: var(--light-color);
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+.copyright {
+  color: var(--wight-color);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 600;
+  opacity: 0.6;
+}
+.footer-nav__icon {
+  display: none;
+}
+.footer-right__contact {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .header-logo-link {
+    margin-right: 4.8rem;
+  }
+  .header__container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .hero {
+    background: url(../images/hero-bg-img2.svg) bottom center no-repeat;
+  }
+  hr {
+    display: none;
+  }
+  .hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25rem;
+    max-width: 683px;
+  }
+  .hero__container-title {
+    font-size: var(--h1-small);
+    font-weight: 700;
+    line-height: var(--h1-small-lh);
+    text-align: center;
+    color: var(--wight-color);
+    margin-bottom: 2.4rem;
+  }
+
+  .hero__container-title span {
+    color: var(--light-color);
+  }
+
+  .hero__container-text {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero__container-description {
+    font-size: var(--body2-font);
+    font-weight: 600;
+    line-height: var(--body2-lh);
+    text-align: center;
+    margin-right: 0;
+
+    width: 470px;
+  }
+
+  /* MAIN FEATURE */
+  .features {
+    background: url(../images/main-top-bg-img.png) top right no-repeat;
+    background-color: var(--sacramento-state-green);
+  }
+  .main-hr {
+    display: block;
+    margin-bottom: 3.2rem;
+  }
+  .feature__container {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    /* padding-left: 9.8rem;
+      padding-right: 9.8rem; */
+    max-width: 573px;
+  }
+
+  .feature__item__text {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .feature__container-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+    max-width: 478px;
+  }
+  .feature__item__text-description {
+    max-width: 445px;
+  }
+  .main-hr {
+    background-color: var(--light-color);
+    margin-bottom: 5.4rem;
+  }
+  .feature__container-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: left;
+    color: var(--wight-color);
+    width: 44.5rem;
+  }
+  .features__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    max-width: 57.3rem;
+  }
+
+  /* MAIN SECTION HOME */
+  .home {
+    background: url(../images/bg-pattern-home-4-about-3.svg) top left no-repeat,
+      url(../images/bg-pattern-about-2-contact-1.svg) bottom -10rem right no-repeat;
+    background-color: var(--deep-jungle-green);
+  }
+
+  .home__container {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 9.8rem;
+    padding-right: 9.8rem;
+  }
+  .home__container-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4.8rem;
+  }
+
+  .home__container-title {
+    font-size: 3.2rem;
+    line-height: 1;
+    margin-bottom: 4.8rem;
+    text-align: center;
+  }
+
+  .home__container-texts {
+    background: url(../images/icon-quotes.svg) top center no-repeat;
+    padding-top: 3.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .home__container-description {
+    font-size: var(--body2-font);
+    font-weight: 600;
+    line-height: var(--body2-lh);
+    text-align: center;
+    color: var(--wight-color);
+    margin-bottom: 2.4rem;
+  }
+  .home__container-name {
+    font-size: var(--h3-font);
+    font-weight: 700;
+    line-height: var(--h3-font-lh);
+    text-align: center;
+    color: var(--rapture-blue);
+    margin-bottom: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+  .home__container-name-text {
+    font-family: Livvic;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.38;
+    text-align: center;
+    color: var(--wight-color);
+    margin-bottom: 3.2rem;
+  }
+  .home__container-img {
+    border-radius: 50%;
+  }
+
+  .ready {
+    background: url(../images/bg-pattern-home-6-about-5.svg) bottom left
+      no-repeat;
+    background-color: var(--light-color);
+  }
+  .ready__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8.4rem;
+    padding-bottom: 8.4rem;
+    padding-left: 9rem;
+    padding-right: 9rem;
+  }
+
+  .ready__container-title {
+    font-size: 3.2rem;
+    line-height: 1;
+    text-align: left;
+  }
+  .ready__container-btn {
+    font-size: var(--body1-font);
+    font-weight: 600;
+    line-height: var(--body1-lh);
+    text-align: left;
+    background-color: var(--light-color);
+    border-color: var(--sacramento-state-green);
+    color: var(--sacramento-state-green);
+  }
+
+  /* fotter tablet  */
+
+  .footer-icon {
+    display: none;
+  }
+  .footer-nav__icon {
+    display: block;
+  }
+  .footer-left__contact {
+    display: none;
+  }
+  .footer-right__contact {
+    display: block;
+    text-align: right;
+  }
+  .footer__logo-img {
+    margin-bottom: 4rem;
+  }
+}
+
+/* BRACKPOINT  MADIA MOBILE*/
+
+@media (max-width: 450px) {
+  .container {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    width: 350px;
+  }
+  .sitenav {
+    display: none;
+  }
+  .header-link {
+    display: none;
+  }
+
+  .sitenav-img {
+    display: block;
+    object-fit: cover;
+  }
+  .header-logo-link {
+    margin-right: 0;
+  }
+
+  .hero__container-title {
+    margin-bottom: 1.8rem;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    color: var(--wight-color);
+  }
+  .hero__container-text {
+    text-align: center;
+  }
+  .hero__container-description {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.8;
+    text-align: center;
+    color: var(--wight-color);
+    width: 333px;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  .mobile-btn {
+    display: block;
+    margin-top: 5rem;
+    padding: 0;
+    font-weight: 400;
+
+    &:active {
+      color: var(--dark-green);
+      background-color: var(--wight-color);
+      border-color: var(--dark-green);
+    }
+  }
+  .humburger-link {
+    font-size: var(--body1-font);
+  }
+  .mobile-nav::before {
+    margin-left: 12rem;
+  }
+
+  /* MAIN FEATURE MOBILE */
+
+  .features {
+    background: url(../images/main-top-bg-img.png) top right no-repeat;
+    background-color: var(--sacramento-state-green);
+  }
+
+  .feature__container {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    margin: 0;
+    width: none;
+  }
+
+  .feature__container-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+
+  .feature__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature__container-title {
+    width: 24rem;
+  }
+  .features__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    width: 33.3rem;
+  }
+  .feature__item__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature__item__text-description {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* MOBILE SECTION HOME */
+
+  .home__container {
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+  .home__container-description {
+    margin-bottom: 1.6em;
+    padding: 0;
+  }
+  /* MOBILE SECTION READY */
+  .ready__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8.3rem;
+    padding-bottom: 8.3rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  .ready__container-title {
+    font-size: 3.2rem;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    width: 327px;
+  }
+
+  .ready__container-btn {
+    margin-bottom: 4.3rem;
+    width: 160px;
+  }
+  /* footer mobile */
+  .footer-hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-nav {
+    margin-bottom: 2.4rem;
+  }
+  .footer__logo-img {
+    gap: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+  .company-logo {
+    margin-bottom: 0;
+  }
+  .footer-right__contact {
+    text-align: center;
+  }
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.4rem;
+  }
+  .footer-nav__icon {
+    display: none;
+  }
+  .footer-icon {
+    margin-top: 2.4rem;
+    display: block;
+  }
+}
